@@ -1,6 +1,6 @@
 # Arduino-Blumenbewaesserung
 Dieses Projekt wurde im Rahmen des Girlsdays 2019 der Westfälischen Hochschule für den Fachbereich  2/Elektrotechnik erstellt. Dieses Projekt bietet die Möglichkeit eine Zimmerpflanze mit einem Feuchtigkeitssensor zu versehen, diesen Sensor zyklisch auszulesen, und dann ggf. eine Pumpe anzusteuern, welche die Pflanze bewässert.
-Im laufe dieses Projekts wird die Fähigkeit erwoben, einfache Schaltungen auzuzeichnen, mit vorgefertigten Steckverbindungen zusammen zu schalten, und eine kleine Transistorschaltung zu löten.
+Im laufe dieses Projekts wird die Fähigkeit erwoben, einfache Schaltungen aufzuzeichnen, mit vorgefertigten Steckverbindungen zusammen zu schalten, und eine kleine Transistorschaltung zu löten.
 
 ## An Hardware benötigen wir:
 * Einen Arduino UNO R3 oder ein Arduino UNO R3 kompatibles Board incl. einem passenden USB Kabel
