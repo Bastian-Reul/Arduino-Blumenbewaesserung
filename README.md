@@ -3,7 +3,7 @@ Dieses Projekt wurde im Rahmen des Girlsdays 2019 der Westfälischen Hochschule 
 Im laufe dieses Projekts wird die Fähigkeit erwoben, einfache Schaltungen aufzuzeichnen, mit vorgefertigten Steckverbindungen zusammen zu schalten, und eine kleine Transistorschaltung zu löten.
 
 ## An Hardware benötigen wir:
-* Einen Arduino UNO R3 oder ein Arduino UNO R3 kompatibles Board incl. einem passenden USB Kabel
+* Einen Arduino UNO R3 oder ein Arduino UNO R3 kompatibles Board incl. einem passenden USB Kabel.
   Ein kompatibles Arduino UNO R3 wäre zum beispiel dieses: [Himalaya basic UNO R3](https://www.conrad.de/de/himalaya-basic-uno-r3-atmega328p-board-atmega16u2-mit-usb-kabel-arduino-uno-r3-kompatibel-802287391.html)
 * Einen Feuchtigkeitssensor den man in die Erde der Topfpflanze stecken kann
   Zum Beispiel dieser: [Seeed Studio Grove - Moisture Sensor 3.3-5V](https://www.conrad.de/de/himalaya-basic-uno-r3-atmega328p-board-atmega16u2-mit-usb-kabel-arduino-uno-r3-kompatibel-802287391.html)
