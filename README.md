@@ -2,7 +2,7 @@
 Dieses Projekt wurde im Rahmen des Girlsdays 2019 der Westfälischen Hochschule für den Fachbereich  2/Elektrotechnik erstellt. Dieses Projekt bietet die Möglichkeit eine Zimmerpflanze mit einem Feuchtigkeitssensor zu versehen, diesen Sensor zyklisch auszulesen, und dann ggf. eine Pumpe anzusteuern, welche die Pflanze bewässert.
 Im laufe dieses Projekts wird die Fähigkeit erwoben, einfache Schaltungen auzuzeichnen, mit vorgefertigten Steckverbindungen zusammen zu schalten, und eine kleine Transistorschaltung zu löten.
 
-##An Hardware benötigen wir:
+## An Hardware benötigen wir:
 * Einen Arduino UNO R3 oder ein Arduino UNO R3 kompatibles Board incl. einem passenden USB Kabel
   Ein kompatibles Arduino UNO R3 wäre zum beispiel dieses: [Himalaya basic UNO R3](https://www.conrad.de/de/himalaya-basic-uno-r3-atmega328p-board-atmega16u2-mit-usb-kabel-arduino-uno-r3-kompatibel-802287391.html)
 * Einen Feuchtigkeitssensor den man in die Erde der Topfpflanze stecken kann
@@ -17,6 +17,10 @@ Zum Beispiel kann diese Pumpe verwendet werden: [Makeblock Water Pump Motor - DC
 * Ein Stück Lochrasterplatine
 * Schlauch um das Vorratsbehältnis mit der Pumpe, und die Pumpe mit dem Topf zu verbinden
 
-##An Werkzeug und Verbrauchsmaterial brauchen wir:
+## An Werkzeug und Verbrauchsmaterial brauchen wir:
 * Lötkolben incl. Zubehör wie Lot, Entlötlitze
 * Isolierten Draht zum Verbinden der Bauteile und Löten der Schaltung auf der Lochrasterplatine
+* Seitenschneider, Pinzette, Abisolierzange, etc.
+
+## Benötigte Software
+* Um den von diesem Git-Repository heruntergeladenen C++ Code (eigentlich ein Pseudo-Code, aber das führt zu weit) zu kompilieren und auf das Arduino Board zu bekommen, benötigt ihr die  [Arduino IDE](https://www.arduino.cc/en/Main/Software)
