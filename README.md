@@ -27,3 +27,12 @@ Zum Beispiel kann diese Pumpe verwendet werden: [Makeblock Water Pump Motor - DC
 ## Benötigte Software
 * Um den von diesem Git-Repository heruntergeladenen C++ Code (eigentlich ein Pseudo-Code, aber das führt zu weit) zu kompilieren und auf das Arduino Board zu bekommen, benötigt ihr die [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 * Und natürlich braucht ihr dieses Repository mit dem Quellcode und der 3D Druck Datei. Klickt hierfür einfach oben rechts auf dieser Seite auf den grünen **Clone or Download** Button und dann auf **Download ZIP**. Diese ZIP Datei könnt ihr dann irgendwo auf eurem Rechner hin entpacken und anschließend die Datei Arduino-Blumenbewaesserung.ino mit einem Doppelklick öffnen. Jetzt sollte sich die Arduino IDE mit dem Quellcode des Projekts öffen. Schaut euch den Quellcode ruhig einmal an und danach könnt ihr ihn mit **Speichern unter** so speichern, dass die Arduino IDE mit den im Hintergrund benötigten Bibliotheken zurecht kommt. Habt ihr nun die IDE korrekt konfiguriert, und das Arduino Board per USB mit dem Computer verbunden, könnt ihr den **Sketch** (das Programm) -> **Hochladen**. Hierbei wird der Quellcode kompiliert und anschließend auf den Arduino hochgeladen. 
+
+## Aufbau
+Die Schaltung kann auf ein Stück Lochrasterplatine augelötet werden. Lötet man den Anschlüssen des Arduinos entsprechend Pinheader auf die Lochrasterplatine, kann man die Schaltung als "Schield"vauf den Arduino aufstecken.
+![Aufbau-Schema](Bilder/ArduinoBewaesserungSchaltplan.png)
+![Aufbau-Vorderseite](Bilder/AufbauVorderseite.jpg)
+![Aufbau-Rückseite](Bilder/AufbauRueckseite.jpg)
+
+
+
