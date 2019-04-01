@@ -30,8 +30,14 @@ Zum Beispiel kann diese Pumpe verwendet werden: [Makeblock Water Pump Motor - DC
 
 ## Aufbau
 Die Schaltung kann auf ein Stück Lochrasterplatine augelötet werden. Lötet man den Anschlüssen des Arduinos entsprechend Pinheader auf die Lochrasterplatine, kann man die Schaltung als "Schield"vauf den Arduino aufstecken.
+
+### Schaltplan
 ![Aufbau-Schema](Bilder/ArduinoBewaesserungSchaltplan.png)
+
+### Aufbau der Vorderseite
 ![Aufbau-Vorderseite](Bilder/AufbauVorderseite.jpg)
+
+### Aufbau der Rückseite
 ![Aufbau-Rückseite](Bilder/AufbauRueckseite.jpg)
 
 
