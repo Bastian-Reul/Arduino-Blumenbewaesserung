@@ -67,10 +67,32 @@ void setup(){
   //Debugging oder Auslesen den Sensorwertes der Feuchtigkeit. Will man den Sensor Wert auf dem Computer angezeigt bekommen, muss man unter der Arduino IDE auf Werkzeuge-> Serieller Monitor klicken, und die Baudrate auf 9600 Baud eingestellt sein muss
   Serial.begin(9600);
   Serial.println("https://github.com/Bastian-Reul/Arduino-Blumenbewaesserung"); 
+      Serial.println("Es wird gemessen"); 
+    digitalWrite(VersorgungFeuchteSensorPin, HIGH); // Die Spannung an dem Feuchtesensor einschalten
+    delay(2000);      //Zwei Sekunden warten bis sich die Spannung für den Feuchtewert stabilisiert hat
+    FeuchteGemessen = analogRead(AnalogWertFeuchtePin); //Den Spannungswert auslesen, der vom Feuchtesensor ausgegeben wird, und die digitale Umwandlung dieses Wertes in der Variablen "FeuchteGemessen" abspeichern
+    Serial.println(FeuchteGemessen); //Ausgeben des Wertes, der bei der Feuchtigkeit herausgekommen ist. Das ist der Wert der Analog / Digital Konvertierung. Er kann zwischen 0 (Erde ist sehr trocken/ Sensor hängt in der Luft) und ca 450 (Erde ist sehr feucht/ Sensor steckt in einem Wassglas)
+    digitalWrite(VersorgungFeuchteSensorPin, LOW); // Da die Spannung für die Feuchtigkeit der Erde jetzt eingelesen wurde, kann die Spannung zur Versorgung des Sensors wieder ausgeschaltet werden, um ein "abrosten" des Sensors zu vermeiden
+    
+    if(FeuchteGemessen < FeuchteZielWert) //Ist die Erde zu trocken?
+      {//ja, es muss bewässert werden
+        Serial.println("Es ist zu trocken"); 
+         Serial.println("Motor wird eingeschaltet"); 
+        digitalWrite(VersorgungMotorPin, HIGH); // Schalte die Pumpe ein
+        delay(60000); //Warte eine Minute, die Pumpe läuft während dieser Zeit //Muss zum Debugging kleiner als das Intervall sein. Bspw. Intervall = 60000, Pumendauer = 10000 (10 Sekunden))
+        Serial.println("Motor wird ausgeschaltet");
+        digitalWrite(VersorgungMotorPin, LOW); // Schalte die Pumpe aus
+      }
+      else
+      {//nein, die Erde ist noch feucht genug
+      //Hier könnten andere Sachen gemacht werden, die passieren sollen wenn die Feuchte gemessen wurde, die Erde aber noch feucht genug ist. Beispielsweise kann der Feuchtigkeitswert über die Serielle Schnittstelle ausgegeben werden
+      Serial.println("Es ist feucht genug"); 
+      }
 }
  
 void loop(){ //Diese Schleife wird mehrere 100 male während einer Sekunde aufgerufen solange der Timer nicht abgelaufen ist
   if (millis() - previousMillis > interval) {
+    Serial.println("Es wird gemessen"); 
     previousMillis = millis();   // Das Warteintervall ist abgelaufen, der previousMillis Wert wird auf die aktuell abgelaufenen millisekunden gesetzt. Damit ergibt für die nächste Prüfung: millis() - previousMillis = 0 (oder zumindest nahe 0)
    
     digitalWrite(VersorgungFeuchteSensorPin, HIGH); // Die Spannung an dem Feuchtesensor einschalten
@@ -81,15 +103,18 @@ void loop(){ //Diese Schleife wird mehrere 100 male während einer Sekunde aufge
     
     if(FeuchteGemessen < FeuchteZielWert) //Ist die Erde zu trocken?
       {//ja, es muss bewässert werden
+        Serial.println("Es ist zu trocken"); 
+         Serial.println("Motor wird eingeschaltet"); 
         digitalWrite(VersorgungMotorPin, HIGH); // Schalte die Pumpe ein
         delay(60000); //Warte eine Minute, die Pumpe läuft während dieser Zeit //Muss zum Debugging kleiner als das Intervall sein. Bspw. Intervall = 60000, Pumendauer = 10000 (10 Sekunden))
+        Serial.println("Motor wird ausgeschaltet");
         digitalWrite(VersorgungMotorPin, LOW); // Schalte die Pumpe aus
       }
       else
       {//nein, die Erde ist noch feucht genug
       //Hier könnten andere Sachen gemacht werden, die passieren sollen wenn die Feuchte gemessen wurde, die Erde aber noch feucht genug ist. Beispielsweise kann der Feuchtigkeitswert über die Serielle Schnittstelle ausgegeben werden
+      Serial.println("Es ist feucht genug"); 
       }
 
   }
 }
-
